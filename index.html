@@ -10,22 +10,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        /* Noto Sans JPをメインフォントに、Interを欧文フォントとして設定 */
         body {
             font-family: 'Noto Sans JP', 'Inter', sans-serif;
         }
-        /* 見出しなど、力強い部分にBlackウェイトを適用 */
         .font-black-jp {
             font-weight: 900;
         }
-        /* メインキャッチコピーのグラデーションテキスト */
         .gradient-text {
             background: linear-gradient(to right, #4ade80, #3b82f6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
-        /* --- グラフ用カスタムスタイル (追加) --- */
         .chart-container {
             position: relative;
             width: 100%;
@@ -33,11 +28,15 @@
             margin-left: auto;
             margin-right: auto;
             height: 350px;
-            max-height: 400px;
+        }
+        @media (min-width: 640px) {
+            .chart-container {
+                height: 400px;
+            }
         }
         @media (min-width: 768px) {
             .chart-container {
-                height: 400px;
+                height: 450px;
             }
         }
     </style>
@@ -57,28 +56,27 @@
             <div class="flex flex-col md:flex-row items-center gap-8">
                 <!-- テキストコンテンツ -->
                 <div class="md:w-1/2 text-center md:text-left">
-                    <h1 class="text-3xl md:text-5xl font-black-jp leading-tight mb-4">
+                    <h1 class="text-2xl sm:text-3xl md:text-5xl font-black-jp leading-tight mb-4">
                         AIを<span class="gradient-text">即戦力化</span><br>
                         ミニマルコストで<br>
                         0から始めるDX
                     </h1>
-                    <p class="text-lg md:text-2xl text-gray-300 mb-8">
-                        チームの「資料作成」「ルーティンワーク」作業効率を<span class="font-bold text-yellow-300">5倍
-                        </span>に。
+                    <p class="text-base sm:text-lg md:text-2xl text-gray-300 mb-6 sm:mb-8">
+                        チームの「資料作成」「ルーティンワーク」作業効率を<span class="font-bold text-yellow-300">5倍</span>に。
                     </p>
                     
                     <!-- CTAボタン -->
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                        <a href="#cta" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg shadow-lg transform transition-transform hover:scale-105">
+                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
+                        <a href="#cta" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg shadow-lg transform transition-transform hover:scale-105 text-sm sm:text-base">
                             今すぐDXを始める (無料相談)
                         </a>
                     </div>
                 </div>
 
                 <!-- 画像プレースホルダー -->
-                <div class="md:w-1/2 mt-8 md:mt-0">
-                    <div class="w-full h-80 bg-gray-700 rounded-lg flex items-center justify-center text-gray-400">
-                      <img src="https://iili.io/KyswS7s.png" alt="KyswS7s.png" border="0">
+                <div class="md:w-1/2 mt-6 sm:mt-8 md:mt-0">
+                    <div class="w-full h-64 sm:h-80 bg-gray-700 rounded-lg flex items-center justify-center text-gray-400 overflow-hidden">
+                      <img src="https://iili.io/KyswS7s.png" alt="DX イメージ" class="w-full h-full object-cover">
                     </div>
                 </div>
             </div>
@@ -89,126 +87,126 @@
     <section class="py-16 md:py-24 bg-gray-50">
         <div class="container mx-auto px-6 max-w-5xl">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-black-jp mb-4">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-black-jp mb-4">
                     AI活用で「コスト」と「時間」を<br class="sm:hidden">
                     <span class="text-red-500">無駄</span>にしていませんか？
                 </h2>
             </div>
 
             <!-- 悩みのリスト -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 <!-- 悩み 1: 高コスト -->
-                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-red-500">
-                    <h3 class="font-bold text-xl mb-2">高コスト</h3>
-                    <p class="text-gray-700">「有料ツールや大規模システム導入は、初期投資とランニングコストが高すぎる…」</p>
+                <div class="bg-white p-4 sm:p-6 rounded-lg shadow-md border-l-4 border-red-500">
+                    <h3 class="font-bold text-lg sm:text-xl mb-2">高コスト</h3>
+                    <p class="text-sm sm:text-base text-gray-700">「有料ツールや大規模システム導入は、初期投資とランニングコストが高すぎる…」</p>
                 </div>
                 <!-- 悩み 2: ROIの不確実性 -->
-                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-red-500">
-                    <h3 class="font-bold text-xl mb-2">ROIの不確実性</h3>
-                    <p class="text-gray-700">「導入効果が不明確で、いくら投資すれば成果が出るのか分からない…」</p>
+                <div class="bg-white p-4 sm:p-6 rounded-lg shadow-md border-l-4 border-red-500">
+                    <h3 class="font-bold text-lg sm:text-xl mb-2">ROIの不確実性</h3>
+                    <p class="text-sm sm:text-base text-gray-700">「導入効果が不明確で、いくら投資すれば成果が出るのか分からない…」</p>
                 </div>
                 <!-- 悩み 3: 選択肢の多さ -->
-                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-red-500">
-                    <h3 class="font-bold text-xl mb-2">選択肢の多さ</h3>
-                    <p class="text-gray-700">「AIモデルやツールが多すぎて、自社に最適なものがどれか判断できない…」</p>
+                <div class="bg-white p-4 sm:p-6 rounded-lg shadow-md border-l-4 border-red-500">
+                    <h3 class="font-bold text-lg sm:text-xl mb-2">選択肢の多さ</h3>
+                    <p class="text-sm sm:text-base text-gray-700">「AIモデルやツールが多すぎて、自社に最適なものがどれか判断できない…」</p>
                 </div>
                 <!-- 悩み 4: スキル不足 -->
-                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-red-500">
-                    <h3 class="font-bold text-xl mb-2">スキル不足</h3>
-                    <p class="text-gray-700">「プロンプトが上手く書けず、期待した成果が出ない。現場が使いこなせない…」</p>
+                <div class="bg-white p-4 sm:p-6 rounded-lg shadow-md border-l-4 border-red-500">
+                    <h3 class="font-bold text-lg sm:text-xl mb-2">スキル不足</h3>
+                    <p class="text-sm sm:text-base text-gray-700">「プロンプトが上手く書けず、期待した成果が出ない。現場が使いこなせない…」</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 3. ソリューション -->
-<section class="py-16 md:py-24 bg-blue-900 text-white">
-    <div class="container mx-auto px-6 max-w-5xl">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-black-jp mb-4">そのお悩み、<span class="text-yellow-300">3日間</span>で解決します</h2>
-            <p class="text-lg text-blue-100">高額な投資は不要。Aipathの「DXスタートプラン」が最短かつ最小コストで現場の生産性を革新します。</p>
-        </div>
-        <!-- 解決策 -->
-        <div class="flex justify-center">
-            <div class="bg-white text-[#0A2463] rounded-lg p-8 flex flex-col items-center shadow-lg max-w-md">
-                <p class="text-lg text-center">資料作成・ルーティンワークを</p>
-                <div class="text-7xl md:text-9xl font-bold my-4">
-                    <span class="align-super text-4xl md:text-6xl">1</span><span class="mx-1">/</span><span>5</span>
+    <section class="py-16 md:py-24 bg-blue-900 text-white">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-black-jp mb-4">そのお悩み、<span class="text-yellow-300">3日間</span>で解決します</h2>
+                <p class="text-base sm:text-lg text-blue-100 px-2">高額な投資は不要。Aipathの「DXスタートプラン」が最短かつ最小コストで現場の生産性を革新します。</p>
+            </div>
+            <!-- 解決策 -->
+            <div class="flex justify-center px-4">
+                <div class="bg-white text-[#0A2463] rounded-lg p-6 sm:p-8 flex flex-col items-center shadow-lg max-w-md w-full">
+                    <p class="text-base sm:text-lg text-center">資料作成・ルーティンワークを</p>
+                    <div class="text-6xl sm:text-7xl md:text-9xl font-bold my-3 sm:my-4">
+                        <span class="align-super text-3xl sm:text-4xl md:text-6xl">1</span><span class="mx-1">/</span><span>5</span>
+                    </div>
+                    <p class="text-base sm:text-lg font-bold text-center">に短縮し、高品質な成果を創出</p>
                 </div>
-                <p class="text-lg font-bold text-center">に短縮し、高品質な成果を創出</p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- 4. プラン概要と期待できる成果 -->
     <section class="py-16 md:py-24 bg-white">
         <div class="container mx-auto px-6 max-w-5xl">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-black-jp mb-4">3日で「即戦力」になる<br>DXスタートプランとは</h2>
+            <div class="text-center mb-8 sm:mb-12">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-black-jp mb-4 px-2">3日で「即戦力」になる<br>DXスタートプランとは</h2>
             </div>
 
-            <div class="flex flex-col md:flex-row gap-8">
+            <div class="flex flex-col md:flex-row gap-6 sm:gap-8">
                 <!-- 概要表 -->
-                <div class="md:w-1/2 bg-gray-50 p-8 rounded-lg shadow-lg border">
-                    <h3 class="text-2xl font-bold mb-6">プラン概要</h3>
-                    <div class="space-y-4">
+                <div class="md:w-1/2 bg-gray-50 p-6 sm:p-8 rounded-lg shadow-lg border">
+                    <h3 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">プラン概要</h3>
+                    <div class="space-y-3 sm:space-y-4">
                         <div>
-                            <dt class="font-bold text-gray-500">プラン名</dt>
-                            <dd class="text-lg font-bold">DXスタートプラン</dd>
+                            <dt class="font-bold text-gray-500 text-sm sm:text-base">プラン名</dt>
+                            <dd class="text-base sm:text-lg font-bold">DXスタートプラン</dd>
                         </div>
                         <div>
-                            <dt class="font-bold text-gray-500">価格</dt>
-                            <dd class="text-lg font-bold">¥59,000</dd>
+                            <dt class="font-bold text-gray-500 text-sm sm:text-base">価格</dt>
+                            <dd class="text-base sm:text-lg font-bold">¥59,000</dd>
                         </div>
                         <div>
-                            <dt class="font-bold text-gray-500">期間</dt>
-                            <dd class="text-lg font-bold">3日間集中サポート（オンライン講義 + コンサルティング）</dd>
+                            <dt class="font-bold text-gray-500 text-sm sm:text-base">期間</dt>
+                            <dd class="text-base sm:text-lg font-bold">3日間集中サポート（オンライン講義 + コンサルティング）</dd>
                         </div>
                         <div>
-                            <dt class="font-bold text-gray-500">内容</dt>
-                            <dd class="text-lg font-bold">プロンプティング基礎〜応用、貴社専用プロンプト設計、最適ツール提案</dd>
+                            <dt class="font-bold text-gray-500 text-sm sm:text-base">内容</dt>
+                            <dd class="text-base sm:text-lg font-bold">プロンプティング基礎〜応用、貴社専用プロンプト設計、最適ツール提案</dd>
                         </div>
                     </div>
                 </div>
                 
                 <!-- 期待される成果 -->
                 <div class="md:w-1/2">
-                    <h3 class="text-2xl font-bold mb-6">期待される成果</h3>
-                    <ul class="space-y-4">
+                    <h3 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">期待される成果</h3>
+                    <ul class="space-y-3 sm:space-y-4">
                         <li class="flex items-start gap-3">
-                            <span class="text-green-500 pt-1">✔</span>
+                            <span class="text-green-500 pt-1 text-xl">✔</span>
                             <div>
-                                <h4 class="font-bold text-lg">圧倒的な時間短縮</h4>
-                                <p class="text-gray-600">資料作成・ルーティンワーク時間を1/5に短縮。</p>
+                                <h4 class="font-bold text-base sm:text-lg">圧倒的な時間短縮</h4>
+                                <p class="text-sm sm:text-base text-gray-600">資料作成・ルーティンワーク時間を1/5に短縮。</p>
                             </div>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="text-green-500 pt-1">✔</span>
+                            <span class="text-green-500 pt-1 text-xl">✔</span>
                             <div>
-                                <h4 class="font-bold text-lg">品質向上</h4>
-                                <p class="text-gray-600">高品質な成果（資料・文書）を安定して創出。</p>
+                                <h4 class="font-bold text-base sm:text-lg">品質向上</h4>
+                                <p class="text-sm sm:text-base text-gray-600">高品質な成果（資料・文書）を安定して創出。</p>
                             </div>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="text-green-500 pt-1">✔</span>
+                            <span class="text-green-500 pt-1 text-xl">✔</span>
                             <div>
-                                <h4 class="font-bold text-lg">スキル習得</h4>
-                                <p class="text-gray-600">現場が自走できる、超実践的なAI活用スキルが身につく。</p>
+                                <h4 class="font-bold text-base sm:text-lg">スキル習得</h4>
+                                <p class="text-sm sm:text-base text-gray-600">現場が自走できる、超実践的なAI活用スキルが身につく。</p>
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-        
-     <!-- 期待される成果2 -->
     </section>
+
+    <!-- 期待される成果2 -->
     <section id="roi" class="py-16 md:py-24 bg-gray-50">
         <div class="container mx-auto px-6 max-w-5xl">
-            <h2 class="text-3xl md:text-4xl font-black-jp mb-8 text-center text-gray-800">本プラン導入による<br>作業時間の比較</h2>
-            <div class="bg-white p-8 rounded-lg shadow-lg">
-                <div class="chart-container h-[400px] md:h-[450px]">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-black-jp mb-6 sm:mb-8 text-center text-gray-800 px-2">本プラン導入による<br>作業時間の比較</h2>
+            <div class="bg-white p-4 sm:p-6 md:p-8 rounded-lg shadow-lg">
+                <div class="chart-container">
                     <canvas id="roiChart"></canvas>
                 </div>
             </div>
@@ -218,37 +216,36 @@
     <!-- 5. カリキュラム詳細 -->
     <section class="py-16 md:py-24 bg-gray-50">
         <div class="container mx-auto px-6 max-w-5xl">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-black-jp mb-4">実践特化。<br>高額投資不要の<br>即戦力カリキュラム</h2>
+            <div class="text-center mb-8 sm:mb-12">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-black-jp mb-4 px-2">実践特化。<br>高額投資不要の<br>即戦力カリキュラム</h2>
             </div>
             
-            <div class="space-y-8">
+            <div class="space-y-6 sm:space-y-8">
                 <!-- セクション1 -->
-                <div class="bg-white p-8 rounded-lg shadow-lg flex items-start gap-6">
-                    <span class="text-4xl">🎓</span>
+                <div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                    <span class="text-3xl sm:text-4xl">🎓</span>
                     <div>
-                        <h3 class="text-2xl font-bold mb-2">セクション1：生成AI入門（守りのAI）</h3>
-                        <p class="text-lg font-bold text-gray-600 mb-3">AI活用の羅針盤と安全基準を確立。</p>
-                        <p class="text-gray-700">著作権、情報漏洩などの法的リスク、ハルシネーション（嘘）対策まで、安全に使うための基礎を徹底。</p>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-2">セクション1：生成AI入門（守りのAI）</h3>
+                        <p class="text-base sm:text-lg font-bold text-gray-600 mb-2 sm:mb-3">AI活用の羅針盤と安全基準を確立。</p>
+                        <p class="text-sm sm:text-base text-gray-700">著作権、情報漏洩などの法的リスク、ハルシネーション（嘘）対策まで、安全に使うための基礎を徹底。</p>
                     </div>
                 </div>
                 <!-- セクション2 -->
-                <div class="bg-white p-8 rounded-lg shadow-lg flex items-start gap-6">
-                    <span class="text-4xl">📝</span>
+                <div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                    <span class="text-3xl sm:text-4xl">📝</span>
                     <div>
-                        <h3 class="text-2xl font-bold mb-2">セクション2：AIテキスティング（攻めの基礎）</h3>
-                        <p class="text-lg font-bold text-gray-600 mb-3">ビジネス文書作成の基礎から応用までを習得。</p>
-                        <p class="text-gray-700">SEO、社内文書、メール作成など、ルーティンワークを高品質かつ高速に処理する「プロンプトエンジニアリング」を実践。</p>
-
+                        <h3 class="text-xl sm:text-2xl font-bold mb-2">セクション2：AIテキスティング（攻めの基礎）</h3>
+                        <p class="text-base sm:text-lg font-bold text-gray-600 mb-2 sm:mb-3">ビジネス文書作成の基礎から応用までを習得。</p>
+                        <p class="text-sm sm:text-base text-gray-700">SEO、社内文書、メール作成など、ルーティンワークを高品質かつ高速に処理する「プロンプトエンジニアリング」を実践。</p>
                     </div>
                 </div>
                 <!-- セクション3 -->
-                <div class="bg-white p-8 rounded-lg shadow-lg flex items-start gap-6">
-                    <span class="text-4xl">📊</span>
+                <div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                    <span class="text-3xl sm:text-4xl">📊</span>
                     <div>
-                        <h3 class="text-2xl font-bold mb-2">セクション3：資料作成と応用（AIの連携）</h3>
-                        <p class="text-lg font-bold text-gray-600 mb-3">複数のAIを連携させた「高速スライド作成ワークフロー」を実践。</p>
-                        <p class="text-gray-700">（企画・構成自動生成 → ビジュアル素材高速出力 → 成果物へ変換）。GA4のデータ分析と組み合わせ、AIマーケティングの基礎メソッドを学習。</p>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-2">セクション3：資料作成と応用（AIの連携）</h3>
+                        <p class="text-base sm:text-lg font-bold text-gray-600 mb-2 sm:mb-3">複数のAIを連携させた「高速スライド作成ワークフロー」を実践。</p>
+                        <p class="text-sm sm:text-base text-gray-700">（企画・構成自動生成 → ビジュアル素材高速出力 → 成果物へ変換）。GA4のデータ分析と組み合わせ、AIマーケティングの基礎メソッドを学習。</p>
                     </div>
                 </div>
             </div>
@@ -258,47 +255,45 @@
     <!-- 6. 本プラン独自の特徴 -->
     <section class="py-16 md:py-24 bg-white">
         <div class="container mx-auto px-6 max-w-5xl">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-black-jp mb-4"><strong>DXスタートプラン</strong>が<br>選ばれる理由</h2>
+            <div class="text-center mb-8 sm:mb-12">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-black-jp mb-4 px-2"><strong>DXスタートプラン</strong>が<br>選ばれる理由</h2>
             </div>
             
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-    <div class="border border-gray-200 p-6 rounded-lg">
-        <img src="https://iili.io/KyL9hU7.png" alt="最適ツールの選定スキルを示すイメージ" class="w-full h-40 object-cover rounded-lg mb-4">
-        <h3 class="font-bold text-xl mb-2">最適ツールの選定スキル</h3>
-        <p class="text-gray-700">コスト、品質、速度を比較分析し、貴社に最適なツールを選び抜く「目利き」スキルを育成。もうツール選びで迷いません。</p>
-    </div>
-    <div class="border border-gray-200 p-6 rounded-lg">
-        <img src="https://iili.io/KyL2TmX.png" alt="実践的ワークフローを示すイメージ" class="w-full h-40 object-cover rounded-lg mb-4">
-        <h3 class="font-bold text-xl mb-2">実践的ワークフロー</h3>
-        <p class="text-gray-700">「ライティング→資料作成→マーケティング」まで、業務に直結するノウハウを体系的に獲得できます。</p>
-    </div>
-    <div class="border border-gray-200 p-6 rounded-lg">
-        <img src="https://iili.io/KyLF8Wg.png" alt="カスタマイズサポートを示すイメージ" class="w-full h-40 object-cover rounded-lg mb-4">
-        <h3 class="font-bold text-xl mb-2">カスタマイズサポート</h3>
-        <p class="text-gray-700">顧客ごとにプロンプトを設計し、最短距離でのDX実現をハンズオンで支援します。</p>
-    </div>
-</div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+                <div class="border border-gray-200 p-4 sm:p-6 rounded-lg">
+                    <img src="https://iili.io/KyL9hU7.png" alt="最適ツールの選定スキルを示すイメージ" class="w-full h-32 sm:h-40 object-cover rounded-lg mb-3 sm:mb-4">
+                    <h3 class="font-bold text-lg sm:text-xl mb-2">最適ツールの選定スキル</h3>
+                    <p class="text-sm sm:text-base text-gray-700">コスト、品質、速度を比較分析し、貴社に最適なツールを選び抜く「目利き」スキルを育成。もうツール選びで迷いません。</p>
+                </div>
+                <div class="border border-gray-200 p-4 sm:p-6 rounded-lg">
+                    <img src="https://iili.io/KyL2TmX.png" alt="実践的ワークフローを示すイメージ" class="w-full h-32 sm:h-40 object-cover rounded-lg mb-3 sm:mb-4">
+                    <h3 class="font-bold text-lg sm:text-xl mb-2">実践的ワークフロー</h3>
+                    <p class="text-sm sm:text-base text-gray-700">「ライティング→資料作成→マーケティング」まで、業務に直結するノウハウを体系的に獲得できます。</p>
+                </div>
+                <div class="border border-gray-200 p-4 sm:p-6 rounded-lg">
+                    <img src="https://iili.io/KyLF8Wg.png" alt="カスタマイズサポートを示すイメージ" class="w-full h-32 sm:h-40 object-cover rounded-lg mb-3 sm:mb-4">
+                    <h3 class="font-bold text-lg sm:text-xl mb-2">カスタマイズサポート</h3>
+                    <p class="text-sm sm:text-base text-gray-700">顧客ごとにプロンプトを設計し、最短距離でのDX実現をハンズオンで支援します。</p>
+                </div>
+            </div>
         </div>
     </section>
     
-
     <!-- 7. クロージング（CTA） -->
     <section id="cta" class="py-16 md:py-24 bg-gray-900 text-white">
         <div class="container mx-auto px-6 max-w-4xl text-center">
-            <h2 class="text-3xl md:text-4xl font-black-jp mb-6">現場の生産性を劇的に変える「3日間」を<br>体験しませんか？</h2>
-
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-black-jp mb-4 sm:mb-6 px-2">現場の生産性を劇的に変える「3日間」を<br>体験しませんか？</h2>
             
             <!-- 価格 -->
-            <div class="bg-gray-800 p-8 rounded-lg inline-block shadow-xl mb-10">
-                <div class="text-lg">DXスタートプラン</div>
-                <div class="text-5xl font-bold text-yellow-300 my-2">¥59,000</div>
-                <div class="text-lg">（3日間集中サポート）</div>
+            <div class="bg-gray-800 p-6 sm:p-8 rounded-lg inline-block shadow-xl mb-8 sm:mb-10">
+                <div class="text-base sm:text-lg">DXスタートプラン</div>
+                <div class="text-4xl sm:text-5xl font-bold text-yellow-300 my-2">¥59,000</div>
+                <div class="text-base sm:text-lg">（3日間集中サポート）</div>
             </div>
 
             <!-- CTAボタン -->
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg shadow-lg transform transition-transform hover:scale-105 text-lg">
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
+                <a href="#" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg shadow-lg transform transition-transform hover:scale-105 text-base sm:text-lg">
                     今すぐDXを始める (無料相談)
                 </a>
             </div>
@@ -320,27 +315,6 @@
             gray: '#D8D8D8',
             white: '#FFFFFF',
             text: '#1E1B18'
-        };
-
-        const chartTooltipCallback = {
-            plugins: {
-                tooltip: {
-                    callbacks: {
-                        title: function(tooltipItems) {
-                            const item = tooltipItems[0];
-                            let label = item.chart.data.labels[item.dataIndex];
-                            if (Array.isArray(label)) {
-                                return label.join(' ');
-                            } else {
-                                return label;
-                            }
-                        }
-                    }
-                },
-                legend: {
-                    position: 'top',
-                },
-            }
         };
 
         const roiCtx = document.getElementById('roiChart');
@@ -400,7 +374,9 @@
                         }
                     },
                     plugins: {
-                        ...chartTooltipCallback.plugins,
+                        legend: {
+                            position: 'top',
+                        },
                         title: {
                             display: true,
                             text: '作業時間の比較',
@@ -420,10 +396,6 @@
                 }
             });
         }
-
     </script>
-</body>
-</html>
-
 </body>
 </html>
