@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DXスタートプラン - 生成AI 実践プログラム（3日間集中）</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts (Inter) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
@@ -24,6 +23,22 @@
             background: linear-gradient(to right, #4ade80, #3b82f6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        /* --- グラフ用カスタムスタイル (追加) --- */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
         }
     </style>
 </head>
@@ -116,7 +131,7 @@
         <!-- 解決策 -->
         <div class="flex justify-center">
             <div class="bg-white text-[#0A2463] rounded-lg p-8 flex flex-col items-center shadow-lg max-w-md">
-                <p class="text-lg text-center">資料作成・ルーティンワーク時間を</p>
+                <p class="text-lg text-center">資料作成・ルーティンワーク</p>
                 <div class="text-7xl md:text-9xl font-bold my-4">
                     <span class="align-super text-4xl md:text-6xl">1</span><span class="mx-1">/</span><span>5</span>
                 </div>
@@ -130,7 +145,7 @@
     <section class="py-16 md:py-24 bg-white">
         <div class="container mx-auto px-6 max-w-5xl">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-black-jp mb-4">3日間で「即戦力」になる<br>DXスタートプランとは？</h2>
+                <h2 class="text-3xl md:text-4xl font-black-jp mb-4">3日で「即戦力」になる<br>DXスタートプランとは</h2>
             </div>
 
             <div class="flex flex-col md:flex-row gap-8">
@@ -165,7 +180,7 @@
                             <span class="text-green-500 pt-1">✔</span>
                             <div>
                                 <h4 class="font-bold text-lg">圧倒的な時間短縮</h4>
-                                <p class="text-gray-600">資料作成・ルーティンワーク時間を1/10に短縮。</p>
+                                <p class="text-gray-600">資料作成・ルーティンワーク時間を1/5に短縮。</p>
                             </div>
                         </li>
                         <li class="flex items-start gap-3">
@@ -190,13 +205,26 @@
                 </div>
             </div>
         </div>
+        
+     <!-- 期待される成果2 -->
+    </section>
+    <section id="roi" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <h2 class="text-3xl md:text-4xl font-black-jp mb-8 text-center text-gray-800">DXスタートプランによる<br>作業時間の比較</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <p class="text-gray-600 mb-6 text-center">本プランの導入により、資料作成やルーティンワークのプロセスは劇的に変化します。企画から完成までの時間を大幅に短縮し、より戦略的な業務にリソースを集中させることが可能になります。</p>
+                <div class="chart-container h-[400px] md:h-[450px]">
+                    <canvas id="roiChart"></canvas>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- 5. カリキュラム詳細 -->
     <section class="py-16 md:py-24 bg-gray-50">
         <div class="container mx-auto px-6 max-w-5xl">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-black-jp mb-4">実践特化。高額投資不要の<br>「即戦力」カリキュラム</h2>
+                <h2 class="text-3xl md:text-4xl font-black-jp mb-4">実践特化。<br>高額投資不要の<br>即戦力カリキュラム</h2>
             </div>
             
             <div class="space-y-8">
@@ -216,7 +244,7 @@
                         <h3 class="text-2xl font-bold mb-2">セクション2：AIテキスティング（攻めの基礎）</h3>
                         <p class="text-lg font-bold text-gray-600 mb-3">ビジネス文書作成の基礎から応用までを習得。</p>
                         <p class="text-gray-700">SEO、社内文書、メール作成など、ルーティンワークを高品質かつ高速に処理する「プロンプトエンジニアリング」を実践。</p>
-                        <p class="text-sm text-blue-600 mt-2">特徴: 10ステップのライティングプロセス（キーワード設定、ペルソナ分析、段階的プロンプト実行）</p>
+
                     </div>
                 </div>
                 <!-- セクション3 -->
@@ -236,7 +264,7 @@
     <section class="py-16 md:py-24 bg-white">
         <div class="container mx-auto px-6 max-w-5xl">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-black-jp mb-4">なぜ「DXスタートプラン」が<br>選ばれるのか？</h2>
+                <h2 class="text-3xl md:text-4xl font-black-jp mb-4"><strong>DXスタートプラン</strong>が<br>選ばれる理由</h2>
             </div>
             
   <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -258,6 +286,7 @@
 </div>
         </div>
     </section>
+    
 
     <!-- 7. クロージング（CTA） -->
     <section id="cta" class="py-16 md:py-24 bg-gray-900 text-white">
@@ -287,6 +316,119 @@
             <p>&copy; 2025 株式会社Aipath. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        const brilliantBlues = {
+            dark: '#0A2463',
+            medium: '#3E92CC',
+            light: '#60A5FA',
+            gray: '#D8D8D8',
+            white: '#FFFFFF',
+            text: '#1E1B18'
+        };
+
+        const chartTooltipCallback = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                                return label.join(' ');
+                            } else {
+                                return label;
+                            }
+                        }
+                    }
+                },
+                legend: {
+                    position: 'top',
+                },
+            }
+        };
+
+        const roiCtx = document.getElementById('roiChart');
+        if (roiCtx) {
+            new Chart(roiCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['資料作成・ルーティンワーク'],
+                    datasets: [
+                        {
+                            label: '従来の時間：企画・リサーチ',
+                            data: [40],
+                            backgroundColor: '#FF6384',
+                            stack: '従来'
+                        },
+                        {
+                            label: '従来の時間：作業・校正',
+                            data: [50],
+                            backgroundColor: '#FF9F40',
+                            stack: '従来'
+                        },
+                        {
+                            label: '従来の時間：デザイン・公開',
+                            data: [10],
+                            backgroundColor: '#FFCD56',
+                            stack: '従来'
+                        },
+                        {
+                            label: 'DXプラン導入後',
+                            data: [20],
+                            backgroundColor: brilliantBlues.medium,
+                            stack: '導入後'
+                        }
+                    ]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            max: 100,
+                            ticks: {
+                                callback: function(value) {
+                                    return value + '%'
+                                }
+                            },
+                            title: {
+                                display: true,
+                                text: '総作業時間に占める割合'
+                            }
+                        },
+                        y: {
+                            ticks: {
+                                display: false
+                            }
+                        }
+                    },
+                    plugins: {
+                        ...chartTooltipCallback.plugins,
+                        title: {
+                            display: true,
+                            text: '作業時間の比較',
+                            font: { size: 16 }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                title: function(tooltipItems) {
+                                    return tooltipItems[0].dataset.label;
+                                },
+                                label: function(context) {
+                                    return `作業割合: ${context.raw}%`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+    </script>
+</body>
+</html>
 
 </body>
 </html>
