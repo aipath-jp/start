@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
+        html {
+    scroll-behavior: smooth;
+}
         body {
             font-family: 'Noto Sans JP', 'Inter', sans-serif;
         }
@@ -63,7 +66,7 @@
                     </p>
                     
                     <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
-                        <a href="https://forms.gle/7HyHQj22SohYKuJW6" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg shadow-lg transform transition-transform hover:scale-105 text-sm sm:text-base">
+                        <a href="#cta" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg shadow-lg transform transition-transform hover:scale-105 text-sm sm:text-base">
                             今すぐDXを始める (無料相談)
                         </a>
                     </div>
@@ -258,22 +261,35 @@
     </section>
     
     <section id="cta" class="py-16 md:py-24 bg-gray-900 text-white">
-        <div class="container mx-auto px-6 max-w-4xl text-center">
-            <h2 class="text-2xl sm:text-3xl md:text-4xl font-black-jp mb-4 sm:mb-6 px-2">現場の生産性を劇的に変える「3日間」を<br>体験しませんか？</h2>
-            
-            <div class="bg-gray-800 p-6 sm:p-8 rounded-lg inline-block shadow-xl mb-8 sm:mb-10">
-                <div class="text-base sm:text-lg">DXスタートプラン</div>
-                <div class="text-4xl sm:text-5xl font-bold text-yellow-300 my-2">¥59,000</div>
-                <div class="text-base sm:text-lg">（3日間集中サポート）</div>
-            </div>
-
-            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
-                <a href="https://forms.gle/7HyHQj22SohYKuJW6" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg shadow-lg transform transition-transform hover:scale-105 text-base sm:text-lg">
-                    今すぐDXを始める (無料相談)
-                </a>
-            </div>
+    <div class="container mx-auto px-6 max-w-4xl text-center">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-black-jp mb-4 sm:mb-6 px-2">
+            現場の生産性を劇的に変える「3日間」を<br>体験しませんか？
+        </h2>
+        
+        <div class="bg-gray-800 p-6 sm:p-8 rounded-lg inline-block shadow-xl mb-8 sm:mb-10">
+            <div class="text-base sm:text-lg">DXスタートプラン</div>
+            <div class="text-4xl sm:text-5xl font-bold text-yellow-300 my-2">¥59,000</div>
+            <div class="text-base sm:text-lg">（3日間集中サポート）</div>
         </div>
-    </section>
+
+        <div class="mb-8">
+            <p class="text-lg text-gray-300 mb-2">＼ 30秒で完了。その場で日程確定 ／</p>
+            <h3 class="text-xl font-bold">無料個別相談の予約</h3>
+        </div>
+
+        <div id="timerex_calendar" data-url="https://timerex.net/s/mindstaff.yota_41d1/2e7c21f4" class="bg-white rounded-xl overflow-hidden shadow-2xl"></div>
+
+        <script id="timerex_embed" src="https://asset.timerex.net/js/embed.js"></script>
+
+        <script type="text/javascript">
+            // ウィジェットの初期化
+            TimerexCalendar();
+        </script>
+        <p class="mt-8 text-sm text-gray-400">
+            ※カレンダーが表示されない場合は、ブラウザを更新してください。
+        </p>
+    </div>
+</section>
 
     <footer class="bg-gray-800 text-gray-400 text-center py-6">
         <div class="container mx-auto px-6">
