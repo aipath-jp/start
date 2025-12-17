@@ -10,76 +10,101 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        html {
-    scroll-behavior: smooth;
-}
-        body {
-            font-family: 'Noto Sans JP', 'Inter', sans-serif;
-        }
-        .font-black-jp {
-            font-weight: 900;
-        }
-        .gradient-text {
-            background: linear-gradient(to right, #4ade80, #3b82f6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            height: 350px;
-        }
-        @media (min-width: 640px) {
-            .chart-container {
-                height: 400px;
-            }
-        }
-        @media (min-width: 768px) {
-            .chart-container {
-                height: 450px;
-            }
-        }
-    </style>
-</head>
-<body class="bg-white text-gray-800 antialiased">
+    .hero-bg {
+        position: relative;
+        background-image: url('https://github.com/user-attachments/assets/ed5fe720-8a2e-45f2-8122-0b996709b991');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed; /* パララックス効果（任意） */
+    }
+    /* 画像の上に暗めのグラデーションを敷いて文字を読みやすくする */
+    .hero-overlay {
+        background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.7) 50%, rgba(15, 23, 42, 0.4) 100%);
+    }
+    .glass-card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+</style>
 
-    <header class="bg-gray-900 text-white">
-        <div class="bg-gray-800 text-center text-sm py-2">
-            <div class="container mx-auto px-4">
-                株式会社Aipath
-            </div>
+<header class="hero-bg text-white overflow-hidden">
+    <div class="relative z-20 bg-gray-900/50 backdrop-blur-sm text-center text-sm py-2 border-b border-white/10">
+        <div class="container mx-auto px-4 tracking-widest opacity-80">
+            株式会社Aipath
         </div>
+    </div>
 
-        <div class="container mx-auto px-6 py-16 md:py-24 max-w-5xl">
-            <div class="flex flex-col md:flex-row items-center gap-8">
-                <div class="md:w-1/2 text-center md:text-left">
-                    <h1 class="text-2xl sm:text-3xl md:text-5xl font-black-jp leading-tight mb-4">
-                        AIを<span class="gradient-text">即戦力化</span><br>
-                        ミニマルコストで<br>
-                        0から始めるDX
+    <div class="hero-overlay relative z-10">
+        <div class="container mx-auto px-6 py-20 md:py-32 max-w-6xl">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                
+                <div class="lg:w-3/5 text-center lg:text-left">
+                    <div class="inline-block bg-blue-600 text-white text-xs md:text-sm font-bold px-3 py-1 rounded-full mb-6 tracking-wider">
+                        NEW GENERATION DX PROGRAM
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black-jp leading-tight mb-6">
+                        AIを<span class="gradient-text">即戦力化</span>し<br>
+                        最小コストで<br>
+                        DXの正解を導く
                     </h1>
-                    <p class="text-base sm:text-lg md:text-2xl text-gray-300 mb-6 sm:mb-8">
-                        チームの「資料作成」「ルーティンワーク」作業効率を<span class="font-bold text-yellow-300">5倍</span>に。
+                    <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-10 leading-relaxed">
+                        「資料作成」「ルーティンワーク」「データ分析」<br class="hidden md:block">
+                        チームの生産性を<span class="font-bold text-yellow-400 text-2xl sm:text-3xl px-1">5倍</span>へ引き上げる3days
                     </p>
                     
-                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
-                        <a href="#cta" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg shadow-lg transform transition-transform hover:scale-105 text-sm sm:text-base">
-                            今すぐDXを始める (無料相談)
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#cta" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-10 rounded-xl shadow-[0_10px_20px_-10px_rgba(249,115,22,0.5)] transform transition-all hover:-translate-y-1 text-lg">
+                            今すぐ無料で相談する
                         </a>
+                        <div class="flex items-center justify-center gap-2 text-sm text-gray-400">
+                            <span class="flex -space-x-2">
+                                <div class="w-8 h-8 rounded-full bg-gray-600 border-2 border-gray-800 flex items-center justify-center text-[10px]">AI</div>
+                                <div class="w-8 h-8 rounded-full bg-blue-600 border-2 border-gray-800 flex items-center justify-center text-[10px]">DX</div>
+                            </span>
+                            <span>30秒で予約完了</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="md:w-1/2 mt-6 sm:mt-8 md:mt-0">
-                    <div class="w-full h-64 sm:h-80 bg-gray-700 rounded-lg flex items-center justify-center text-gray-400 overflow-hidden">
-                      <img src="https://github.com/user-attachments/assets/ed5fe720-8a2e-45f2-8122-0b996709b991" alt="DX イメージ" class="w-full h-full object-cover">
+                <div class="lg:w-2/5 w-full">
+                    <div class="glass-card p-6 md:p-8 rounded-2xl shadow-2xl">
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-blue-500/20 p-3 rounded-lg">
+                                    <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg text-white">3日間の集中習得</h3>
+                                    <p class="text-sm text-gray-400">現場がすぐに使える超実践的カリキュラム</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="bg-green-500/20 p-3 rounded-lg">
+                                    <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg text-white">コストパフォーマンス</h3>
+                                    <p class="text-sm text-gray-400">一律 ¥59,000</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="bg-purple-500/20 p-3 rounded-lg">
+                                    <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg text-white">専任ハンズオン支援</h3>
+                                    <p class="text-sm text-gray-400">貴社専用のプロンプトを共に構築</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
-    </header>
+    </div>
+</header>
 
     <section class="py-16 md:py-24 bg-gray-50">
         <div class="container mx-auto px-6 max-w-5xl">
